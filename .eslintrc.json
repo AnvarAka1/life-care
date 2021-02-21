@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:import/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "babel",
+    "promise",
+    "import"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "comma-dangle": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "sibling", "parent"],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "internal"
+          }
+        ]
+      }
+    ],
+    "import/newline-after-import": ["error"],
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": ["error"]
+  }
+}

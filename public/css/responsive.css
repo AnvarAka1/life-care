@@ -1,0 +1,158 @@
+/*
+	================================================
+	21. Media Quries
+	================================================
+*/
+@media (min-width: 1367px) and (max-width: 2000px) {
+
+	.mobile-menu,
+	.mobile-header {
+		display: none;
+	}
+
+	#mainnav,
+	.header {
+		display: block;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+
+	.mobile-menu,
+	.mobile-header {
+		display: none;
+	}
+
+	#mainnav,
+	.header {
+		display: block;
+	}
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.mobile-menu,
+	.mobile-header {
+		display: none;
+	}
+
+	#mainnav,
+	.header {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.mobile-menu,
+	.mobile-header {
+		display: none;
+	}
+
+	.content-menu {
+		width: 100%;
+	}
+
+	#main-menu .menu>li>a {
+		padding: 0 13px;
+	}
+
+	#mainnav,
+	.header {
+		display: block;
+	}
+
+	.services__wrapper,
+	.single-team,
+	.footer-social-link,
+	.single-link,
+	.case-item-2 {
+		margin-bottom: 30px;
+	}
+
+	.pl-60 {
+		padding-left: 0px;
+	}
+
+	.slider {
+		padding-bottom: 100px;
+	}
+
+	.about-two-appoinment {
+		position: relative;
+		top: 0px;
+		z-index: 99999;
+	}
+
+	.slider-text {
+		padding: 100px 0px;
+	}
+
+	.footer-section .footer-top .footer-social-link ul li i {
+		height: 30px;
+		width: 30px;
+	}
+
+	.footer-section .footer-bottom ul li {
+		margin-left: 20px;
+	}
+
+	.logo {
+		height: inherit;
+		left: 20px;
+		padding: 0;
+		position: absolute;
+		top: 20px;
+		z-index: 999999;
+	}
+}
+
+@media (max-width: 767px) {
+	.mobile-menu {
+		display: block;
+	}
+
+	.services__wrapper,
+	.single-team,
+	.footer-social-link,
+	.single-link,
+	.case-item-2 {
+		margin-bottom: 30px;
+	}
+
+	.pl-60 {
+		padding-left: 0px;
+	}
+
+	.slider {
+		padding-bottom: 100px;
+	}
+
+	.about-two-appoinment {
+		position: relative;
+		top: 0px;
+		z-index: 99999;
+	}
+
+	.slider-text {
+		padding: 100px 0px;
+	}
+
+	#mainnav,
+	.header,
+	.header-top-start {
+		display: none;
+	}
+
+	.logo {
+		height: inherit;
+		left: 20px;
+		padding: 0;
+		position: absolute;
+		top: 5px;
+		z-index: 999999;
+	}
+
+}

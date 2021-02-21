@@ -1,0 +1,39 @@
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/assets/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery.meanmenu.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/assets/bootstrap-4/dist/js/bootstrap.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<script src="/assets/swiper/swiper.min.js"></script>
+
+<script src="/js/main.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+  })
+
+  var swiper = new Swiper('.testimonials-slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+</script>
+<script>
+  jQuery(document).ready(function () {
+    jQuery('.mobile-menu').meanmenu()
+  })
+</script>

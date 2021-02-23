@@ -11,5 +11,7 @@ exports.getBlogList = (req, res, next) => {
 }
 
 exports.getBlogDetail = (req, res, next) => {
-  return res.render('blog-detail')
+  Blog.findById(req.params.id)
+    .then(blog => res.render('blog-detail', { blog }))
+    .catch(err => console.log(err))
 }

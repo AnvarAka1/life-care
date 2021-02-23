@@ -33,54 +33,34 @@
           <!-- post-one -->
           <div class="blog-post mb-4">
             <div class="blog-image">
-              <img src="/images/blog/blog-1.jpg" class="img-fluid" alt="">
+              <img src="<%= blog.image %>" class="img-fluid" alt="<%= blog.title %>">
               <div class="badges">
                 <span class="badge badge-primary mr-3">Medical</span>
                 <span class="badge badge-danger">Health</span>
               </div>
             </div>
             <div class="blog-body blog-single">
-              <h3 class="mb-3"><a href="">How to keep safe bone and health during winters?</a></h3>
+              <h3 class="mb-3"><a href=""><%= blog.title %></a></h3>
               <div class="news-list mb-3">
                 <ul>
-                  <li class="pr-3"><a href="blog-detail.html"><i
-                              class="fa fa-calendar yellow"></i> 4th AUg 2020 </a>
+                  <li class="pr-3">
+                    <a href="blog-detail.html">
+                      <i class="fa fa-calendar yellow"></i> 4th AUg 2020
+                    </a>
                   </li>
-                  <li class="pr-3"><a href="blog-detail.html"><i class="fa fa-user yellow"></i>
-                      Jack Daniels</a></li>
-                  <li><a href="blog-detail.html"><i class="fa fa-comment yellow"></i> 3</a></li>
+                  <li class="pr-3">
+                    <a href="blog-detail.html">
+                      <i class="fa fa-user yellow"></i> Jack Daniels
+                    </a>
+                  </li>
+                  <li>
+                    <a href="blog-detail.html">
+                      <i class="fa fa-comment yellow"></i> 3
+                    </a>
+                  </li>
                 </ul>
               </div>
-              <p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting,
-                remaining essentially unchanged.</p>
-              <p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.</p>
-              <blockquote class="mt-4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting,
-                remaining essentially unchanged.
-              </blockquote>
-              <p class="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting,
-                remaining essentially unchanged.</p>
+              <%- blog.description %>
             </div>
           </div>
         </div>
@@ -89,7 +69,6 @@
 
       <!-- right-sidebar-column -->
       <div class="col-lg-4">
-
 
         <!-- sidebar-categories -->
         <div class="sidebar-widget mb-3">

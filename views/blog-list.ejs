@@ -39,7 +39,9 @@
         <div class="col-lg-4 col-md-6">
           <div class="blog-card">
             <div class="blog-image">
-              <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid">
+              <a href="/blogs/<%= item._id %>">
+                <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid">
+              </a>
             </div>
             <div class="blog-content">
               <div class="d-flex align-items-center justify-content-between">
@@ -52,13 +54,15 @@
                 </div>
               </div>
 
-              <h3><a href="/blogs"><%= item.title %></a>
+              <h3><a href="/blogs/<%= item._id %>"><%= item.title %></a>
               </h3>
               <p>
-                <%= item.description %>
+                <%= item.shortDescription %>
               </p>
-              <a href="/blogs/<%=item%>" class="btn btn-secondary mt-1">
-                <span class="txt">Learn More <i class="fa fa-angle-right"></i></span>
+              <a href="/blogs/<%=item._id%>" class="btn btn-secondary mt-1">
+                <span class="txt">
+                  Learn More <i class="fa fa-angle-right"></i>
+                </span>
               </a>
             </div>
           </div>

@@ -9,8 +9,16 @@ module.exports = {
   options: {
     navigation: contentNavigation,
     properties: {
+      title: {
+        isTitle: true
+      },
       description: {
         type: 'richtext'
+      },
+    },
+    custom: {
+      description: {
+        hi: 'hello'
       }
     }
   },

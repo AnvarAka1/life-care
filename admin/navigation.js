@@ -1,6 +1,9 @@
-const contentNavigation = {
+exports.contentNavigation = {
   name: 'main',
   icon: 'Star',
 }
 
-exports.contentNavigation = contentNavigation
+exports.adminNavigation = {
+  name: 'admin',
+  icon: 'User'
+}

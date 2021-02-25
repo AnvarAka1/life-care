@@ -1,8 +1,8 @@
-const Slideshow = require('../../models/slideshow')
+const Service = require('../../models/service')
 const { contentNavigation } = require('../navigation')
 
 module.exports = {
-  resource: Slideshow,
+  resource: Service,
   options: {
     navigation: contentNavigation
   }

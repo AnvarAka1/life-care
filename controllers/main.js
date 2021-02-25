@@ -1,7 +1,43 @@
 const Blog = require('../models/blog')
+const Slideshow = require('../models/slideshow')
+const Advantage = require('../models/advantage')
+const Service = require('../models/service')
+const Achievement = require('../models/achievement')
 
 exports.getIndex = (req, res, next) => {
-  return res.render('index')
+  let slideshowItems = null
+  let advantage = null
+  let services = null
+  let achievement = null
+
+  Slideshow.find()
+    .then(results => {
+      slideshowItems = results
+
+      return Advantage.findOne()
+    })
+    .then(result => {
+      advantage = result
+      return Service.find()
+    })
+    .then(results => {
+      services = results
+      return Achievement.findOne()
+
+    })
+    .then(result => {
+      achievement = result
+      return Promise.resolve()
+    })
+    .then(() => {
+      return res.render('index', {
+        slideshowItems,
+        advantage,
+        services,
+        achievement
+      })
+    })
+    .catch(error => console.log(error))
 }
 
 exports.getBlogList = (req, res, next) => {

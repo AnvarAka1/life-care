@@ -9,15 +9,16 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <!--Multiple-->
-    <div class="swiper-slide slide-1">
-      <div class="slider-text">
-        <h2>Best doctor availabe <br>to help you.</h2>
-        <h6 class="my-4">We Believe in the best service.</h6>
-        <div class="button">
-          <a href="#" class="btn btn-primary btn-service">Our Services</a>
+    <% slideshowItems.forEach(item => { %>
+      <div class="swiper-slide slide-<%= item._id %>" style="background-image: url('<%= item.image %>')">
+        <div class="slider-text">
+          <h2><%= item.title %></h2>
+          <h6 class="my-4">
+            <%= item.description %>
+          </h6>
         </div>
       </div>
-    </div>
+    <% }) %>
   </div>
   <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
@@ -36,27 +37,11 @@
       </div>
       <div class="col-lg-7">
         <div class="about-sec-content">
-          <span class="about-sub-title text-primary">about us</span>
-          <h2><span class="text-primary">MediMax</span> Is Always<br> Take Care Of Your Health
+          <span class="about-sub-title text-primary">our advantages</span>
+          <h2>
+            <%= advantage.title %>
           </h2>
-          <h6>We always places patients at the center of our attention, and concentrate on improving their
-            experience with the aid of technologies.</h6>
-          <ul>
-            <li><i class="fa fa-check pr-3 text-primary"></i>We check for your current health
-              situation and decide
-              treatment
-            </li>
-            <li><i class="fa fa-check pr-3 text-primary"></i>We check for your current health
-              situation and decide
-              treatment
-            </li>
-
-          </ul>
-          <div class="exp d-flex">
-            <span class="exp-number">20</span>
-            <h5 class="exp-caption">years of <br> experiance</h5>
-          </div>
-          <img src="/images/sign.png" class="img-fluid w-50" alt="">
+          <h6><%- advantage.description %></h6>
         </div>
       </div>
     </div>
@@ -78,26 +63,23 @@
     </div>
     <div class="row">
       <!-- Multiple -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="service-wrap">
-          <div class="service-desc">
-            <div class="service-icon">
-              <img src="/images/icon/bone.png" class="img-fluid" alt="">
-            </div>
-            <h3 class="service-title">
-              <a href="#">Body Surgery</a>
-            </h3>
-            <p class="desc">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s
-            </p>
-            <div class="service-btn">
-              <a class="readmore" href="#">Read More <i
-                        class="glyph-icon flaticon-right-arrow-2"></i></a>
+      <% services.forEach(service => { %>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service-wrap">
+            <div class="service-desc">
+              <div class="service-icon">
+                <img src="<%= service.image %>" class="img-fluid" alt="">
+              </div>
+              <h3 class="service-title">
+                <%= service.title %>
+              </h3>
+              <p class="desc">
+                <%= service.description %>
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>
@@ -156,13 +138,13 @@
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter">
-                    <h2><span class="pink-color counter">150</span></h2>
+                    <h2><span class="pink-color counter"><%= achievement.doctorNumber %></span></h2>
                     <span>Doctors</span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pb-25 pl-65 ">
-                    <h2><span class="green-color counter">340</span></h2>
+                    <h2><span class="green-color counter"><%= achievement.branchNumber %></span></h2>
                     <span>all branches</span>
                   </div>
                 </div>
@@ -170,14 +152,14 @@
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-25">
-                    <h2 class="green-color"><span class="green-color counter">430</span>+
+                    <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %></span>+
                     </h2>
                     <span>total patient</span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-65">
-                    <h2><span class="pink-color counter">240</span></h2>
+                    <h2><span class="pink-color counter"><%= achievement.awardNumber %></span></h2>
                     <span>award</span>
                   </div>
                 </div>

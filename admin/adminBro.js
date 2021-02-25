@@ -7,6 +7,8 @@ const User = require('./resources/User')
 const Blog = require('./resources/Blog')
 const Advantage = require('./resources/Advantage')
 const Slideshow = require('./resources/Slideshow')
+const Service = require('./resources/Service')
+const Achievement = require('./resources/Achievement')
 
 const UserModel = require('../models/user')
 
@@ -17,11 +19,12 @@ const adminBroOptions = {
     User,
     Blog,
     Advantage,
-    Slideshow
+    Slideshow,
+    Service,
+    Achievement
   ],
 
-  dashboard: {
-  },
+  dashboard: {},
   rootPath: '/admin',
 }
 

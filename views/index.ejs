@@ -257,35 +257,38 @@
 
     <div class="row">
       <!-- Multiple -->
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="/images/blog/blog-1.jpg" alt="" class="img-fluid">
-            <div class="blog-date">
-              <p>By Admin</p>
-            </div>
-          </div>
-          <div class="blog-content">
-            <div class="d-flex align-items-center justify-content-between">
-              <ul class="blog-tags">
-                <li><a href="#">Health,</a></li>
-                <li><a href="#">Theropy</a></li>
-              </ul>
-              <div class="blog-time">
-                <h6>03/05/2020</h6>
+      <% blogs.forEach(blog => { %>
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="<%= blog.image %>" alt="" class="img-fluid">
+              <div class="blog-date">
+                <p>By Admin</p>
               </div>
             </div>
+            <div class="blog-content">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="blog-tags">
+                  <li><a href="#">Health,</a></li>
+                  <li><a href="#">Theropy</a></li>
+                </ul>
+                <div class="blog-time">
+                  <h6>03/05/2020</h6>
+                </div>
+              </div>
 
-            <h3><a href="blog-list.html">How to keep safe bone and health during winters?</a>
-            </h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry...
-            </p>
-            <a href="blog-list.html" class="btn btn-secondary mt-1"><span class="txt">Learn More <i
-                        class="fa fa-angle-right"></i></span></a>
+              <h3>
+                <a href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+              </h3>
+              <p><%= blog.shortDescription %>
+              </p>
+              <a href="/blogs/<%= blog._id %>" class="btn btn-secondary mt-1">
+                <span class="txt">Learn More <i class="fa fa-angle-right"></i></span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>
@@ -306,11 +309,13 @@
     </div>
     <div class="row">
       <!-- Multiple -->
-      <div class="col-lg-2 col-md-4">
-        <div class="partner-img">
-          <img src="/images/partners/partner-1.png" class="img-fluid" alt="">
+      <% partners.forEach(partner => { %>
+        <div class="col-lg-2 col-md-4">
+          <div class="partner-img">
+            <img src="<%= partner.image %>" class="img-fluid" alt="<%= partner.title %>">
+          </div>
         </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>

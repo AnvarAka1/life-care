@@ -9,6 +9,7 @@ const Advantage = require('./resources/Advantage')
 const Slideshow = require('./resources/Slideshow')
 const Service = require('./resources/Service')
 const Achievement = require('./resources/Achievement')
+const Testimonial = require('./resources/Testimonial')
 
 const UserModel = require('../models/user')
 
@@ -21,7 +22,8 @@ const adminBroOptions = {
     Advantage,
     Slideshow,
     Service,
-    Achievement
+    Achievement,
+    Testimonial
   ],
 
   dashboard: {},

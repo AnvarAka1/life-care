@@ -3,12 +3,14 @@ const Slideshow = require('../models/slideshow')
 const Advantage = require('../models/advantage')
 const Service = require('../models/service')
 const Achievement = require('../models/achievement')
+const Testimonial = require('../models/testimonial')
 
 exports.getIndex = (req, res, next) => {
   let slideshowItems = null
   let advantage = null
   let services = null
   let achievement = null
+  let testimonials = null
 
   Slideshow.find()
     .then(results => {
@@ -23,10 +25,13 @@ exports.getIndex = (req, res, next) => {
     .then(results => {
       services = results
       return Achievement.findOne()
-
     })
     .then(result => {
       achievement = result
+      return Testimonial.find()
+    })
+    .then(results => {
+      testimonials = results
       return Promise.resolve()
     })
     .then(() => {
@@ -34,7 +39,8 @@ exports.getIndex = (req, res, next) => {
         slideshowItems,
         advantage,
         services,
-        achievement
+        achievement,
+        testimonials
       })
     })
     .catch(error => console.log(error))

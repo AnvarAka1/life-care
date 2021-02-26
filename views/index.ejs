@@ -191,43 +191,42 @@
         <div class="swiper-container testimonial-slider">
           <div class="swiper-wrapper">
             <!-- Multiple -->
-            <div class="swiper-slide">
-              <div class="testimonial testimonial-style-1">
-                <h2>Best Doctor in the world</h2>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                  in a piece of classical
-                  Latin literature from 45 BC, making it over 2000 years old.</p>
+            <% testimonials.forEach(testimonial => { %>
+              <div class="swiper-slide">
+                <div class="testimonial testimonial-style-1">
+                  <h2><%= testimonial.title %></h2>
+                  <p>
+                    <%= testimonial.review %>
+                  </p>
 
-                <div class="testimonial-user-wrapper">
-                  <div class="row">
-                    <div class="col-lg-8 ml-auto mr-auto">
-                      <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-2">
-                          <img src="/images/testimonials/testimonial-pic-4.jpg"
-                               class="img-circle" alt=""/>
-                        </div>
-                        <div class="col-lg-6">
-                          <h4>John Doe</h4>
-                          <span>Patient</span>
-                          <div class="testimonial-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                  <div class="testimonial-user-wrapper">
+                    <div class="row">
+                      <div class="col-lg-8 ml-auto mr-auto">
+                        <div class="row align-items-center justify-content-center">
+                          <div class="col-lg-2">
+                            <img src="<%= testimonial.image %>"
+                                 class="img-circle" alt=""/>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4><%= testimonial.name %></h4>
+                            <span><%= testimonial.position %></span>
+                            <div class="testimonial-rating">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
+                    <img src="/images/testimonials/quote-right.png" class="quote-icon" alt=""/>
                   </div>
-
-
-                  <img src="/images/testimonials/quote-right.png" class="quote-icon" alt=""/>
                 </div>
               </div>
-            </div>
-
+            <% }) %>
 
           </div>
           <!-- Add Pagination -->

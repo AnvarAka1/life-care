@@ -14,6 +14,6 @@ const userSchema = new Schema({
     enum: ['admin', 'restricted'],
     required: true
   }
-})
+}, { timestamps: true })
 
 module.exports = model('User', userSchema)

@@ -16,6 +16,8 @@ const UserModel = require('../models/user')
 
 AdminBro.registerAdapter(AdminBroMongoose)
 
+const withAuth = false
+
 const adminBroOptions = {
   resources: [
     User,
@@ -34,7 +36,7 @@ const adminBroOptions = {
 
 const adminBro = new AdminBro(adminBroOptions)
 
-exports.adminBroRouter = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
+const authRouter = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   authenticate: async (email, password) => {
     const user = await UserModel.findOne({ email })
     if (user) {
@@ -48,6 +50,8 @@ exports.adminBroRouter = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   cookiePassword: 'something-like-this123'
 })
 
-// exports.adminBroRouter = AdminBroExpress.buildRouter(adminBro)
+const simpleRouter = AdminBroExpress.buildRouter(adminBro)
+
+exports.adminBroRouter = withAuth ? authRouter : simpleRouter
 
 exports.adminBro = adminBro

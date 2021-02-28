@@ -59,7 +59,7 @@
               <p>
                 <%= item.shortDescription %>
               </p>
-              <a href="/blogs/<%=item._id%>" class="btn btn-secondary mt-1">
+              <a href="/blogs/<%= item._id %>" class="btn btn-secondary mt-1">
                 <span class="txt">
                   Learn More <i class="fa fa-angle-right"></i>
                 </span>
@@ -69,10 +69,11 @@
         </div>
       <% }) %>
 
-
-
     </div>
   </div>
+
+  <%- include('./includes/pagination', { pagination }) %>
+
 </section>
 <!-- end -->
 <%- include('./includes/footer') %>

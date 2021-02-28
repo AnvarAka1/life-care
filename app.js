@@ -12,7 +12,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/uploads', express.static('uploads'))
+app.use('uploads', express.static(path.join(__dirname, 'uploads')))
 
 const MONGODB_URI = 'mongodb+srv://anvar_aka:mongodb_password@cluster0.waage.mongodb.net/medela?retryWrites=true&w=majority'
 

@@ -18,6 +18,6 @@ const blogSchema = new Schema({
     required: true
   }
 
-})
+}, { timestamps: true })
 
 module.exports = model('Blog', blogSchema)

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <ul class="pagination justify-content-center">
+        <li class="page-item <%= pagination.prevPage ? '' : 'disabled' %>">
+          <a class="page-link" href="?page=<%= pagination.prevPage %>" tabindex="-1">Previous</a>
+        </li>
+        <% for (var i = 1; i <= pagination.pageCount; i++) { %>
+
+          <li class="page-item <%= i === pagination.currentPage ? 'active' : '' %>">
+            <a class="page-link" href="?page=<%= i %>">
+              <%= i %>
+              <%- i === pagination.currentPage ? '<span class="sr-only">(current)</span>' : '' %>
+            </a>
+          </li>
+        <% } %>
+        <li class="page-item <%= pagination.nextPage ? '' : 'disabled' %>">
+          <a class="page-link" href="?page=<%= pagination.nextPage %>">Next</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,6 @@ const slideShowSchema = new Schema({
     required: true
   }
 
-})
+}, { timestamps: true })
 
 module.exports = model('Slideshow', slideShowSchema)

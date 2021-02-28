@@ -17,6 +17,6 @@ const achievementSchema = new Schema({
     type: Number,
     required: true
   }
-})
+}, { timestamps: true })
 
 module.exports = model('Achievement', achievementSchema)

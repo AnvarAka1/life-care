@@ -7,16 +7,11 @@ class FileProvider extends BaseProvider {
   constructor () {
     super(path.join(__dirname, '../../public'))
     this.assetPath = path.join(__dirname, '../../public')
-
-    console.log('path', this.path)
   }
 
   async upload (file, key) {
-    console.log(key)
     const fullPath = path.resolve(this.assetPath, key)
     const dirPath = path.dirname(fullPath)
-
-    console.log('dirPath', dirPath)
 
     if (!existsSync(dirPath)) {
       await promises.mkdir(dirPath, { recursive: true })
@@ -29,7 +24,6 @@ class FileProvider extends BaseProvider {
   }
 
   path (key, bucket) {
-    console.log(key, bucket)
     return key
   }
 

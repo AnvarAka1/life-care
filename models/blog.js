@@ -1,10 +1,6 @@
 const { model, Schema } = require('mongoose')
 
 const blogSchema = new Schema({
-  image: {
-    type: String,
-    required: true
-  },
   title: {
     type: String,
     required: true
@@ -16,7 +12,11 @@ const blogSchema = new Schema({
   description: {
     type: String,
     required: true
-  }
+  },
+  key: {},
+  mimeType: {},
+  bucket: {},
+  size: {}
 
 }, { timestamps: true })
 

@@ -5,12 +5,19 @@ const { BaseProvider } = require('@admin-bro/upload')
 
 class FileProvider extends BaseProvider {
   constructor () {
-    super(path.join(__dirname, '../../public'))
-    this.assetPath = path.join(__dirname, '../../public')
+    const bucket = path.join(__dirname, '../../')
+
+    super(bucket)
+
+    this.assetPath = bucket
   }
 
   async upload (file, key) {
-    const fullPath = path.resolve(this.assetPath, key)
+    // Need to change it to make it work with absolute/relative path
+    // key must be relative
+    // fullpath must be absolute, but without 'uploads' dir
+    const newKey = key.substr(1)
+    const fullPath = path.resolve(this.assetPath, newKey)
     const dirPath = path.dirname(fullPath)
 
     if (!existsSync(dirPath)) {

@@ -46,12 +46,12 @@ module.exports = {
       // DB properties: have to be in your schema
       // where bucket key will be stored
       key: 'key',
-      // where mime type will be stored
       mimeType: 'mime',
-      // where bucket name will be stored
       bucket: 'bucket',
-      // where size will be stored
-      size: 'size',
+      size: 'size'
+    },
+    uploadPath: (record, filename) => {
+      return path.join('/uploads', record.id(), filename)
     }
   })]
 }

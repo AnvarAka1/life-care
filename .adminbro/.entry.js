@@ -17,3 +17,9 @@ import Component8 from '../node_modules/@admin-bro/upload/src/features/upload-fi
 AdminBro.UserComponents.Component8 = Component8
 import Component9 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/show'
 AdminBro.UserComponents.Component9 = Component9
+import Component10 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/edit'
+AdminBro.UserComponents.Component10 = Component10
+import Component11 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/list'
+AdminBro.UserComponents.Component11 = Component11
+import Component12 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/show'
+AdminBro.UserComponents.Component12 = Component12

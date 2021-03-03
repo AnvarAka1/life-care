@@ -11,6 +11,7 @@ const Service = require('./resources/Service')
 const Achievement = require('./resources/Achievement')
 const Testimonial = require('./resources/Testimonial')
 const Partner = require('./resources/Partner')
+const Treatment = require('./resources/Treatment')
 
 const UserModel = require('../models/user')
 
@@ -25,6 +26,7 @@ const adminBroOptions = {
     Advantage,
     Slideshow,
     Service,
+    Treatment,
     Achievement,
     Testimonial,
     Partner

@@ -1,11 +1,11 @@
-/* 
+/*
 * BASIC STYLE
-  - General Style    
-  - Button Style      
-      
-* HEADER 
+  - General Style
+  - Button Style
+
+* HEADER
   - Header Style
-  
+
 * CONTANT
   - Banner Style
   - Typography css
@@ -16,7 +16,7 @@
   - Blog Css
   - Process Css
   - Contact Form Css
-  
+
 * FOOTER/*
 
 
@@ -941,7 +941,7 @@ label {
 
 
 /*************************
-  About-two-start 
+  About-two-start
   *******************/
 .about-two-appoinment {
     position: absolute;
@@ -2214,6 +2214,18 @@ img {
 
 .blog-image {
     position: relative;
+    height: 250px
+}
+
+.blog-image > a {
+    display: inline-block;
+    height: 100%;
+}
+.blog-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
 
 .blog-date p {
@@ -2442,10 +2454,10 @@ img {
     color: #648ed6;
 }
 
-/* 
+/*
 ---------------------------------------------
-page login/signup 
---------------------------------------------- 
+page login/signup
+---------------------------------------------
 */
 .page-login {
     background: #fafafa;
@@ -2502,10 +2514,10 @@ page login/signup
     font-size: 13px;
 }
 
-/* 
+/*
 ---------------------------------------------
 page faq
---------------------------------------------- 
+---------------------------------------------
 */
 .section-faq {
     padding: 40px 0;

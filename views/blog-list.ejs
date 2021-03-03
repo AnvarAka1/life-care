@@ -40,7 +40,7 @@
           <div class="blog-card">
             <div class="blog-image">
               <a href="/blogs/<%= item._id %>">
-                <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid">
+                <img src="<%= item.key %>" alt="<%= item.title %>" class="img-fluid">
               </a>
             </div>
             <div class="blog-content">
@@ -50,7 +50,7 @@
                   <li><a href="#">Theropy</a></li>
                 </ul>
                 <div class="blog-time">
-                  <h6>03/05/2020</h6>
+                  <h6><%= item.createdAt %></h6>
                 </div>
               </div>
 

@@ -1,11 +1,12 @@
 const { Router } = require('express')
 
-const mainController = require('../controllers/main')
+const indexController = require('../controllers/index')
+const blogController = require('../controllers/blog')
 
 const router = new Router()
 
-router.get('/', mainController.getIndex)
-router.get('/blogs', mainController.getBlogList)
-router.get('/blogs/:id', mainController.getBlogDetail)
+router.get('/', indexController.getIndex)
+router.get('/blogs', blogController.getBlogList)
+router.get('/blogs/:id', blogController.getBlogDetail)
 
 module.exports = router

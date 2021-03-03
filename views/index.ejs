@@ -98,23 +98,23 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-6">
-        <div class="services__wrapper mb-40">
-          <div class="services-item scale">
-            <div class="services__thumb thumb fix w-img">
-              <img src="/images/services/01.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="services__content">
-              <h3><a href="team-details.html">Diagnosis for illnesses and infections</a></h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s
-              </p>
-              <a href="services-details.html" class="btn btn-secondary">Read more <i
-                        class="fa fa-long-arrow-right"></i></a>
+      <% treatments.forEach(treatment => { %>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="services__wrapper mb-40">
+            <div class="services-item scale">
+              <div class="services__thumb thumb fix w-img">
+                <img src="<%= treatment.key %>" class="img-fluid" alt="<%= treatment.title %>">
+              </div>
+              <div class="services__content">
+                <h3><%= treatment.title %></h3>
+                <p>
+                  <%= treatment.description %>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>
@@ -261,7 +261,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="blog-card">
             <div class="blog-image">
-              <img src="<%= blog.image %>" alt="" class="img-fluid">
+              <img src="<%= blog.key %>" alt="<%= blog.title %>" class="img-fluid">
               <div class="blog-date">
                 <p>By Admin</p>
               </div>
@@ -303,7 +303,6 @@
         <div class="service-heading text-center mb-5">
           <h6>Certificate that are own by trusts</h6>
           <h2>Our Trusts <span class="text-primary">Brands</span></h2>
-
         </div>
       </div>
     </div>

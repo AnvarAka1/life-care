@@ -33,7 +33,7 @@
           <!-- post-one -->
           <div class="blog-post mb-4">
             <div class="blog-image">
-              <img src="<%= blog.image %>" class="img-fluid" alt="<%= blog.title %>">
+              <img src="<%= blog.key %>" class="img-fluid" alt="<%= blog.title %>">
               <div class="badges">
                 <span class="badge badge-primary mr-3">Medical</span>
                 <span class="badge badge-danger">Health</span>
@@ -45,17 +45,7 @@
                 <ul>
                   <li class="pr-3">
                     <a href="blog-detail.html">
-                      <i class="fa fa-calendar yellow"></i> 4th AUg 2020
-                    </a>
-                  </li>
-                  <li class="pr-3">
-                    <a href="blog-detail.html">
-                      <i class="fa fa-user yellow"></i> Jack Daniels
-                    </a>
-                  </li>
-                  <li>
-                    <a href="blog-detail.html">
-                      <i class="fa fa-comment yellow"></i> 3
+                      <i class="fa fa-calendar yellow"></i> <%= blog.createdAt %>
                     </a>
                   </li>
                 </ul>

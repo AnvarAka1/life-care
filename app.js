@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
+const i18next = require('./i18next')
 const { adminBro, adminBroRouter } = require('./admin/adminBro')
 const mainRoutes = require('./routes/main')
 
@@ -18,6 +19,7 @@ const MONGODB_URI = 'mongodb+srv://anvar_aka:mongodb_password@cluster0.waage.mon
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
+app.use(i18next)
 app.use(adminBro.options.rootPath, adminBroRouter)
 app.use(bodyParser.json())
 app.use(mainRoutes)

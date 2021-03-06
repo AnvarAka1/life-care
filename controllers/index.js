@@ -1,3 +1,5 @@
+const i18next = require('i18next')
+
 const Blog = require('../models/blog')
 const Slideshow = require('../models/slideshow')
 const Advantage = require('../models/advantage')
@@ -9,6 +11,7 @@ const Treatment = require('../models/treatment')
 const { getDateFormattedList } = require('../utils/date')
 
 exports.getIndex = (req, res, next) => {
+  console.log('req.i18n', req.language, req.languages)
   let slideshowItems = null
   let advantage = null
   let services = null

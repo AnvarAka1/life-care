@@ -37,7 +37,7 @@
       </div>
       <div class="col-lg-7">
         <div class="about-sec-content">
-          <span class="about-sub-title text-primary">our advantages</span>
+          <span class="about-sub-title text-primary"><%= t('our advantages') %></span>
           <h2>
             <%= advantage.title %>
           </h2>
@@ -55,8 +55,8 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6>See what we provide for your treatment</h6>
-          <h2>Our Best <span class="text-primary">Services</span></h2>
+          <h6><%= t('See what we provide for your treatment') %></h6>
+          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Services') %></span></h2>
 
         </div>
       </div>
@@ -92,8 +92,8 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6 class="text-primary">Our clinic offers all kinds of services.</h6>
-          <h2>Our Best <span class="text-primary">Treatments</span></h2>
+          <h6 class="text-primary"><%= t('Our clinic offers all kinds of services.') %></h6>
+          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Treatments') %></span></h2>
         </div>
       </div>
     </div>
@@ -130,22 +130,26 @@
           <div class="appointment__counter">
             <div class="appoinment-section-title">
               <div class="mb-20">
-                <div class="appoinment-title mb-15"><span>Our Achievements</span></div>
+                <div class="appoinment-title mb-15">
+                  <span><%= t('Our Achievements') %></span>
+                </div>
               </div>
-              <h2 class="mb-40">Achievments that we gain from hardwork.</h2>
+              <h2 class="mb-40">
+                <%= t('Achievements that we gain from hard work.') %>
+              </h2>
             </div>
             <div class="appointment__counter--inner p-relative">
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter">
                     <h2><span class="pink-color counter"><%= achievement.doctorNumber %></span></h2>
-                    <span>Doctors</span>
+                    <span><%= t('doctors') %></span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pb-25 pl-65 ">
                     <h2><span class="green-color counter"><%= achievement.branchNumber %></span></h2>
-                    <span>all branches</span>
+                    <span><%= t('all branches') %></span>
                   </div>
                 </div>
               </div>
@@ -154,13 +158,13 @@
                   <div class="single__counter pt-65 pl-25">
                     <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %></span>+
                     </h2>
-                    <span>total patient</span>
+                    <span><%= t('total patients') %></span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-65">
                     <h2><span class="pink-color counter"><%= achievement.awardNumber %></span></h2>
-                    <span>award</span>
+                    <span><%= t('awards') %></span>
                   </div>
                 </div>
               </div>
@@ -180,8 +184,8 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="section-heading">
-          <h6>See what people think about us</h6>
-          <h2>Our Best <span class="text-primary">Client's</span></h2>
+          <h6><%= t('See what people think about us') %></h6>
+          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Clients') %></span></h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
             been the
             industry's standard dummy text ever since the 1500s,</p>
@@ -248,8 +252,8 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6>See Our Latest News</h6>
-          <h2>Our News <span class="text-primary">Blogs</span></h2>
+          <h6><%= t('See Our Latest News') %></h6>
+          <h2><%= t('Our News') %> <span class="text-primary"><%= t('Blogs') %></span></h2>
 
         </div>
       </div>
@@ -262,18 +266,11 @@
           <div class="blog-card">
             <div class="blog-image">
               <img src="<%= blog.key %>" alt="<%= blog.title %>" class="img-fluid">
-              <div class="blog-date">
-                <p>By Admin</p>
-              </div>
             </div>
             <div class="blog-content">
-              <div class="d-flex align-items-center justify-content-between">
-                <ul class="blog-tags">
-                  <li><a href="#">Health,</a></li>
-                  <li><a href="#">Theropy</a></li>
-                </ul>
+              <div class="d-flex align-items-center justify-content-end">
                 <div class="blog-time">
-                  <h6>03/05/2020</h6>
+                  <h6><%= blog.createdAt %></h6>
                 </div>
               </div>
 
@@ -283,7 +280,7 @@
               <p><%= blog.shortDescription %>
               </p>
               <a href="/blogs/<%= blog._id %>" class="btn btn-secondary mt-1">
-                <span class="txt">Learn More <i class="fa fa-angle-right"></i></span>
+                <span class="txt"><%= t('Learn More') %> <i class="fa fa-angle-right"></i></span>
               </a>
             </div>
           </div>
@@ -301,8 +298,8 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6>Certificate that are own by trusts</h6>
-          <h2>Our Trusts <span class="text-primary">Brands</span></h2>
+          <h6><%= t('Certificate that are own by trusts') %></h6>
+          <h2><%= t('Our Trusts') %> <span class="text-primary"><%= t('Brands') %></span></h2>
         </div>
       </div>
     </div>

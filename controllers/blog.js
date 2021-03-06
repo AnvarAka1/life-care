@@ -11,7 +11,10 @@ exports.getBlogList = (req, res, next) => {
   Blog.find()
     .count()
     .then(count => {
-      pagination = getPagination({ page, count }, 10)
+      pagination = getPagination({
+        page,
+        count
+      }, 10)
       return Blog.find()
         .sort({ _id: 'desc' })
         .skip(pagination.skipValue)
@@ -30,8 +33,20 @@ exports.getBlogList = (req, res, next) => {
 }
 
 exports.getBlogDetail = (req, res, next) => {
-  Blog.findById(req.params.id)
+  const id = req.params.id
+  let recentBlogs = null
+  Blog
+    .find({ _id: { $ne: id } })
+    .sort({ _id: 'desc' })
+    .limit(10)
     .lean()
-    .then(blog => res.render('blog-detail', { blog: getDateFormattedItem(blog) }))
+    .then(list => {
+      recentBlogs = list
+      return Blog.findById(id).lean()
+    })
+    .then(blog => res.render('blog-detail', {
+      recentBlogs: getDateFormattedList(recentBlogs),
+      blog: getDateFormattedItem(blog)
+    }))
     .catch(err => console.log(err))
 }

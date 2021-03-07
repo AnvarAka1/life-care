@@ -9,9 +9,19 @@
           <div class="btn-menu"><span></span></div>
           <nav id="main-menu" class="main-menu">
             <ul class="menu">
-              <li><a href="/"><%= t('Home')%></a></li>
+              <li><a href="/"><%= t('Home') %></a></li>
               <li><a href="/blogs"><%= t('Blogs') %></a></li>
             </ul>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle lang-dropdown" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                <span>English</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="?lng=ru">English</a></li>
+                <li><a class="dropdown-item" href="?lng=en">Русский</a></li>
+              </ul>
+            </div>
           </nav>
 
         </div>

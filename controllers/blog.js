@@ -1,6 +1,7 @@
 const Blog = require('../models/blog')
 const { getPagination } = require('../utils/pagination')
-const { getDateFormattedList, getDateFormattedItem } = require('../utils/date')
+const { getFormattedList } = require('../utils/list')
+const { getFormattedItem } = require('../utils/item')
 
 const ITEMS_PER_PAGE = 12
 
@@ -23,7 +24,7 @@ exports.getBlogList = (req, res, next) => {
         .then(list => {
           res.render('blog-list', {
             pageTitle: 'Blogs',
-            list: getDateFormattedList(list),
+            list: getFormattedList(req.language, list),
             pagination: pagination.view
           })
         })
@@ -45,8 +46,8 @@ exports.getBlogDetail = (req, res, next) => {
       return Blog.findById(id).lean()
     })
     .then(blog => res.render('blog-detail', {
-      recentBlogs: getDateFormattedList(recentBlogs),
-      blog: getDateFormattedItem(blog)
+      recentBlogs: getFormattedList(req.language, recentBlogs),
+      blog: getFormattedItem(req.language, blog)
     }))
     .catch(err => console.log(err))
 }

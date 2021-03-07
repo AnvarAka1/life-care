@@ -11,7 +11,7 @@ i18next
     backend: {
       loadPath: path.join(__dirname, 'locales', '{{lng}}', 'translation.json')
     },
-    debug: true,
+    // debug: true,
     detection: {
       order: ['querystring', 'cookie'],
       caches: ['cookie']

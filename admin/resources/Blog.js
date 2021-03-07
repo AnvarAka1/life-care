@@ -19,7 +19,10 @@ module.exports = {
       _id: {
         isTitle: true
       },
-      description: {
+      'description.en': {
+        type: 'richtext'
+      },
+      'description.ru': {
         type: 'richtext'
       },
       updatedAt: { isVisible: { edit: false } },

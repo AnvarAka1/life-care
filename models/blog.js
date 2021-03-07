@@ -2,19 +2,37 @@ const { model, Schema } = require('mongoose')
 
 const blogSchema = new Schema({
   title: {
-    type: String,
-    required: true
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
   },
   image: {
     type: String
   },
   shortDescription: {
-    type: String,
-    required: true
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
   },
   description: {
-    type: String,
-    required: true
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
   },
   key: {},
   mimeType: {},

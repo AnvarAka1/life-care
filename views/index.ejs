@@ -10,10 +10,10 @@
   <div class="swiper-wrapper">
     <!--Multiple-->
     <% slideshowItems.forEach(item => { %>
+      <div class="swiper-slide slide-<%= item._id %>">
       <div class="swiper-image-wrapper">
         <img  src="<%= item.key %>" alt="<%= item.title %>" />
       </div>
-      <div class="swiper-slide slide-<%= item._id %>">
         <div class="slider-text">
           <h2><%= item.title %></h2>
           <h6 class="my-4">

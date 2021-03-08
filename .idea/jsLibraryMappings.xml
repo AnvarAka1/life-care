@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/ejs, @types/ejs-locals, @types/express, @types/i18next-fs-backend, @types/i18next-node-fs-backend, @types/jquery, @types/mongodb, @types/node}" />
+    <file url="PROJECT" libraries="{@types/ejs, @types/ejs-locals, @types/express, @types/i18next-fs-backend, @types/i18next-node-fs-backend, @types/jquery, @types/js-cookie, @types/mongodb, @types/node}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

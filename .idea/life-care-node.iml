@@ -16,5 +16,6 @@
     <orderEntry type="library" name="@types/i18next-fs-backend" level="application" />
     <orderEntry type="library" name="@types/i18next-node-fs-backend" level="application" />
     <orderEntry type="library" name="@types/jquery" level="application" />
+    <orderEntry type="library" name="@types/js-cookie" level="application" />
   </component>
 </module>

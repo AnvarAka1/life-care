@@ -46,3 +46,9 @@ $('.case__slider--active').slick({
 //     meanScreenWidth: '800'
 //   })
 // })
+
+$(function () {
+  const currentLanguage = Cookies.get('i18next')
+  const value = currentLanguage === 'ru' ? 'Язык' : 'Language'
+  $('.current-language').html(value)
+})

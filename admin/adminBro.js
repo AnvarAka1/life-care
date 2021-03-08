@@ -3,6 +3,7 @@ const AdminBroExpress = require('@admin-bro/express')
 const AdminBroMongoose = require('@admin-bro/mongoose')
 const bcrypt = require('bcrypt')
 
+const { hideEditTimestamps, withImage } = require('./utils')
 const User = require('./resources/User')
 const Blog = require('./resources/Blog')
 const Advantage = require('./resources/Advantage')
@@ -19,19 +20,20 @@ AdminBro.registerAdapter(AdminBroMongoose)
 
 const withAuth = false
 
-const adminBroOptions = {
-  resources: [
-    User,
-    Blog,
-    Advantage,
-    Slideshow,
-    Service,
-    Treatment,
-    Achievement,
-    Testimonial,
-    Partner
-  ],
+const resources = [
+  hideEditTimestamps(User),
+  withImage(hideEditTimestamps(Blog)),
+  hideEditTimestamps(Advantage),
+  withImage(hideEditTimestamps(Slideshow)),
+  hideEditTimestamps(Service),
+  withImage(hideEditTimestamps(Treatment)),
+  hideEditTimestamps(Achievement),
+  withImage(hideEditTimestamps(Testimonial)),
+  withImage(hideEditTimestamps(Partner))
+]
 
+const adminBroOptions = {
+  resources,
   dashboard: {},
   rootPath: '/admin',
 }

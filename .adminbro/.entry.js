@@ -23,3 +23,9 @@ import Component11 from '../node_modules/@admin-bro/upload/src/features/upload-f
 AdminBro.UserComponents.Component11 = Component11
 import Component12 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/show'
 AdminBro.UserComponents.Component12 = Component12
+import Component13 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/edit'
+AdminBro.UserComponents.Component13 = Component13
+import Component14 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/list'
+AdminBro.UserComponents.Component14 = Component14
+import Component15 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/show'
+AdminBro.UserComponents.Component15 = Component15

@@ -2,18 +2,32 @@ const { model, Schema } = require('mongoose')
 
 const slideShowSchema = new Schema({
   image: {
-    type: String,
-    required: true
+    type: String
   },
   title: {
-    type: String,
-    required: true
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
   },
   description: {
-    type: String,
-    required: true
-  }
-
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
+  },
+  key: {},
+  mimeType: {},
+  bucket: {},
+  size: {}
 }, { timestamps: true })
 
 module.exports = model('Slideshow', slideShowSchema)

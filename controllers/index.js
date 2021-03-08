@@ -18,20 +18,18 @@ exports.getIndex = (req, res, next) => {
   let testimonials = null
   let blogs = null
   let partners = null
-
-  Slideshow.find()
+  return Slideshow.find({}).limit(10).lean()
     .then(results => {
-      slideshowItems = results
-
+      slideshowItems = getFormattedList(req.language, results)
       return Advantage.findOne().lean()
     })
     .then(result => {
       advantage = getFormattedItem(req.language, result)
-      return Service.find().limit(6).lean()
+      return Service.find({}).limit(6).lean()
     })
     .then(results => {
       services = getFormattedList(req.language, results)
-      return Treatment.find().limit(6).lean()
+      return Treatment.find({}).limit(6).lean()
     })
     .then(results => {
       treatments = getFormattedList(req.language, results)
@@ -39,21 +37,18 @@ exports.getIndex = (req, res, next) => {
     })
     .then(result => {
       achievement = getFormattedItem(req.language, result)
-      return Testimonial.find().lean()
+      return Testimonial.find({}).limit(10).lean()
     })
     .then(results => {
       testimonials = getFormattedList(req.language, results)
-      return Blog.find().sort({ _id: 'desc' }).lean().limit(3)
+      return Blog.find({}).sort({ _id: 'desc' }).lean().limit(3)
     })
     .then(results => {
       blogs = getFormattedList(req.language, results)
-      return Partner.find().lean()
+      return Partner.find({}).lean()
     })
     .then(results => {
       partners = getFormattedList(req.language, results)
-      return Promise.resolve()
-    })
-    .then(() => {
       return res.render('index', {
         slideshowItems,
         advantage,

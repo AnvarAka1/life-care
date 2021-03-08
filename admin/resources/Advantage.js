@@ -5,10 +5,12 @@ module.exports = {
   resource: Advantage,
   options: {
     navigation: contentNavigation,
-    properties: {
-      description: {
-        type: 'richtext'
-      }
+    actions: {
+      new: { isVisible: false },
+      delete: { isVisible: false },
+      filter: { isVisible: false },
+      show: { isVisible: false },
+      bulkDelete: { isVisible: false }
     }
   }
 

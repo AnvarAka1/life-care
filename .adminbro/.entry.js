@@ -29,3 +29,5 @@ import Component14 from '../node_modules/@admin-bro/upload/src/features/upload-f
 AdminBro.UserComponents.Component14 = Component14
 import Component15 from '../node_modules/@admin-bro/upload/src/features/upload-file/components/show'
 AdminBro.UserComponents.Component15 = Component15
+import Component16 from '../admin/components/dashboard'
+AdminBro.UserComponents.Component16 = Component16

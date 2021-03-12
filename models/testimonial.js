@@ -22,8 +22,7 @@ const testimonialSchema = new Schema({
     }
   },
   image: {
-    type: String,
-    required: true
+    type: String
   },
   title: {
     ru: {

@@ -35,7 +35,7 @@ const resources = [
 const adminBroOptions = {
   resources,
   dashboard: {
-    component: AdminBro.bundle('./components/dashboard')
+    // component: AdminBro.bundle('./components/dashboard')
   },
   rootPath: '/admin',
 }

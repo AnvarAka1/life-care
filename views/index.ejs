@@ -28,39 +28,13 @@
 </div>
 <!-- end -->
 
-<!-- About-section-start -->
-<section class="section about-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-5">
-        <div class="about-sec-img">
-          <img src="/images/men.jpg" class="img-fluid">
-        </div>
-
-      </div>
-      <div class="col-lg-7">
-        <div class="about-sec-content">
-          <span class="about-sub-title text-primary"><%= t('our advantages') %></span>
-          <h2>
-            <%= advantage.title %>
-          </h2>
-          <h6><%- advantage.description %></h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Services-section-start -->
-
-<div class="our-services section">
+<div id="services" class="our-services section">
   <div class=" container">
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6><%= t('See what we provide for your treatment') %></h6>
-          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Services') %></span></h2>
-
+          <h2><%= t('Our') %> <span class="text-primary"><%= t('Services') %></span></h2>
         </div>
       </div>
     </div>
@@ -87,13 +61,12 @@
 <!-- end -->
 
 <!-- service-section-start -->
-<section class="section service-section services-area" aria-label="section">
+<section id="treatment" class="section service-section services-area" aria-label="section">
   <div class="container">
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6 class="text-primary"><%= t('Our clinic offers all kinds of services.') %></h6>
-          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Treatments') %></span></h2>
+          <h2><%= t('Treatment in') %> <span class="text-primary"><%= t('India') %></span></h2>
         </div>
       </div>
     </div>
@@ -121,6 +94,29 @@
 </section>
 
 
+<!-- About-section-start -->
+<section id="advantages" class="section about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="about-sec-img">
+          <img src="/images/men.jpg" class="img-fluid">
+        </div>
+
+      </div>
+      <div class="col-lg-7">
+        <div class="about-sec-content">
+          <span class="about-sub-title text-primary"><%= t('our advantages') %></span>
+          <h2>
+            <%= advantage.title %>
+          </h2>
+          <h6><%- advantage.description %></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Appointment-sections-start -->
 <section class="appointment-area pt-0 pb-100">
   <div class="container">
@@ -135,7 +131,7 @@
                 </div>
               </div>
               <h2 class="mb-40">
-                <%= t('Achievements that we gain from hard work.') %>
+                <%= t('Achievements in numbers') %>
               </h2>
             </div>
             <div class="appointment__counter--inner p-relative">
@@ -178,7 +174,7 @@
 <!-- end -->
 
 <!-- Testimonials-start -->
-<section class="testimonial-section section">
+<section id="review" class="testimonial-section section">
   <div class="container">
     <!-- Section content -->
     <div class="row">
@@ -254,9 +250,7 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6><%= t('See Our Latest News') %></h6>
-          <h2><%= t('Our News') %> <span class="text-primary"><%= t('Blogs') %></span></h2>
-
+          <h2><%= t('Blog') %></h2>
         </div>
       </div>
     </div>
@@ -301,7 +295,7 @@
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
           <h6><%= t('Certificate that are own by trusts') %></h6>
-          <h2><%= t('Our Trusts') %> <span class="text-primary"><%= t('Brands') %></span></h2>
+          <h2><%= t('Partners carousel') %></h2>
         </div>
       </div>
     </div>

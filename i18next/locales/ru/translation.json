@@ -2,10 +2,15 @@
   "our advantages": "Наши преимущества",
   "See what we provide for your treatment": "Посмотрите что мы делаем для вашего лечения",
   "Our Best": "Наши Лучшие",
-  "Services": "Сервисы",
+  "Services": "Услуги",
   "Our clinic offers all kinds of services.": "Наша клиника предлагает все виды сервисов.",
   "Treatments": "Лечения",
   "Our Achievements": "Наши достижения",
+  "Treatment in": "Лечение в",
+  "India": "Индии",
+  "Treatment in India": "Лечение в Индии",
+  "Our services": "Наши услуги",
+  "Reviews": "Отзывы",
   "Achievements that we gain from hard work.": "Достижения, полученные упорным трудом.",
   "doctors": "докторов",
   "all branches": "всех филиалов",
@@ -14,8 +19,10 @@
   "See what people think about us": "Посмотрите, что люди о нас думают",
   "Clients": "Клиенты",
   "Our News": "Наши новостные",
+
   "Blogs": "Блоги",
   "Certificate that are own by trusts": "Спонсоры, которым мы доверяем",
+  "Our": "Наши",
   "Our Trusts": "Наши спонсоры",
   "Brands": "Бренды",
   "Blog": "Блог",
@@ -23,6 +30,7 @@
   "See Our Latest News": "Наши крайние посты",
   "Learn More": "Подробнее",
   "Blog Details": "Детали блога",
-  "Resent Posts": "Недавние посты"
-
+  "Resent Posts": "Недавние посты",
+  "Partners carousel": "Карусель партнеров",
+  "Achievements in numbers": "Достижения в цифрах"
 }

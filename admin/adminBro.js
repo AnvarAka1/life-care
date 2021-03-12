@@ -18,7 +18,7 @@ const UserModel = require('../models/user')
 
 AdminBro.registerAdapter(AdminBroMongoose)
 
-const withAuth = false
+const withAuth = true
 
 const resources = [
   hideEditTimestamps(User),

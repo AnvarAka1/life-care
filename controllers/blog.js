@@ -30,7 +30,11 @@ exports.getBlogList = (req, res, next) => {
         })
     })
 
-    .catch(err => console.log(err))
+    .catch(err => {
+      const error = new Error(err)
+      error.httpStatusCode = 500
+      return next(error)
+    })
 }
 
 exports.getBlogDetail = (req, res, next) => {
@@ -49,5 +53,9 @@ exports.getBlogDetail = (req, res, next) => {
       recentBlogs: getFormattedList(req.language, recentBlogs),
       blog: getFormattedItem(req.language, blog)
     }))
-    .catch(err => console.log(err))
+    .catch(err => {
+      const error = new Error(err)
+      error.httpStatusCode = 500
+      return next(error)
+    })
 }

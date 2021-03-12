@@ -76,6 +76,18 @@ p {
     color: #303030;
 }
 
+.logo img {
+    width: 100px;
+    height: auto;
+
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 70px
+    }
+}
+
 ul {
     margin: 0;
     padding: 0;

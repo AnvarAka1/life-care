@@ -1,9 +1,9 @@
 exports.contentNavigation = {
-  name: 'main',
+  name: 'Main',
   icon: 'Star',
 }
 
 exports.adminNavigation = {
-  name: 'admin',
+  name: 'Admin',
   icon: 'User'
 }

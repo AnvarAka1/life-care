@@ -2,7 +2,9 @@
   <div class="container">
     <div class="flex-header">
       <div class="logo">
-        <a href="/" title="Logo">MediMax.</a>
+        <a href="/" title="Logo">
+          <img src="/images/logo/logo.png" alt="logo" />
+        </a>
       </div>
 
       <div class="content-menu">
@@ -10,10 +12,10 @@
           <div class="btn-menu"><span></span></div>
           <nav class="mobile-menu">
             <ul class="menu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/blogs">Blogs</a></li>
+              <li><a href="/"><%= t('Home') %></a></li>
+              <li><a href="/blogs"><%= t('Blogs') %></a></li>
               <li>
-                <a href="#" class="current-language">Language (Язык)</a>
+                <a href="#" class="current-language"><%= t('Language') %></a>
                 <ul class="sub-menu">
                   <li><a href="?lng=en">English</a></li>
                   <li><a href="?lng=ru">Русский</a></li>

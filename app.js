@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 
 const i18next = require('./i18next')
 const { adminBro, adminBroRouter } = require('./admin/adminBro')
+const errorController = require('./controllers/error')
 const mainRoutes = require('./routes/main')
 
 const app = express()
@@ -23,6 +24,17 @@ app.use(i18next)
 app.use(adminBro.options.rootPath, adminBroRouter)
 app.use(bodyParser.json())
 app.use(mainRoutes)
+
+app.get('/500', errorController.get500)
+
+app.use(errorController.get404)
+
+app.use((error, req, res, next) => {
+  res.status(500).render('500', {
+    pageTitle: 'Error!',
+    path: '/500'
+  })
+})
 
 app.listen(3001, () => {
   console.log('hey, I am running!')

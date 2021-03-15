@@ -25,7 +25,7 @@ const resources = [
   withImage(hideEditTimestamps(Blog)),
   hideEditTimestamps(Advantage),
   withImage(hideEditTimestamps(Slideshow)),
-  hideEditTimestamps(Service),
+  withImage(hideEditTimestamps(Service)),
   withImage(hideEditTimestamps(Treatment)),
   hideEditTimestamps(Achievement),
   withImage(hideEditTimestamps(Testimonial)),

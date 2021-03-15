@@ -30,7 +30,7 @@
 
 <!-- Services-section-start -->
 <div id="services" class="our-services section">
-  <div class=" container">
+  <div class="container">
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
@@ -39,17 +39,19 @@
       </div>
     </div>
     <div class="row">
-      <!-- Multiple -->
       <% services.forEach(service => { %>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service-wrap">
-            <div class="service-desc">
-              <h3 class="service-title">
-                <%= service.title %>
-              </h3>
-              <p class="desc">
-                <%= service.description %>
-              </p>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="services__wrapper mb-40">
+            <div class="services-item scale">
+              <div class="services__thumb thumb fix w-img">
+                <img src="<%= service.key %>" class="img-fluid" alt="<%= service.title %>">
+              </div>
+              <div class="services__content">
+                <h3><%= service.title %></h3>
+                <p>
+                  <%= service.description %>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -57,6 +59,7 @@
 
     </div>
   </div>
+
 </div>
 <!-- end -->
 
@@ -205,7 +208,7 @@
                         <div class="row align-items-stretch justify-content-center">
                           <div>
                             <div class="image-wrapper">
-                            <img src="<%= testimonial.image %>"
+                            <img src="<%= testimonial.key %>"
                                  class="rounded-circle" alt=""/>
                             </div>
                           </div>
@@ -304,7 +307,7 @@
       <% partners.forEach(partner => { %>
         <div class="col-lg-2 col-md-4">
           <div class="partner-img">
-            <img src="<%= partner.image %>" class="img-fluid" alt="<%= partner.title %>">
+            <img src="<%= partner.key %>" class="img-fluid" alt="<%= partner.title %>">
           </div>
         </div>
       <% }) %>

@@ -20,7 +20,11 @@ const serviceSchema = new Schema({
       type: String,
       required: true
     }
-  }
+  },
+  key: {},
+  mimeType: {},
+  bucket: {},
+  size: {}
 
 }, { timestamps: true })
 

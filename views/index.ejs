@@ -11,9 +11,9 @@
     <!--Multiple-->
     <% slideshowItems.forEach(item => { %>
       <div class="swiper-slide slide-<%= item._id %>">
-      <div class="swiper-image-wrapper">
-        <img  src="<%= item.key %>" alt="<%= item.title %>" />
-      </div>
+        <div class="swiper-image-wrapper">
+          <img src="<%= item.key %>" alt="<%= item.title %>"/>
+        </div>
         <div class="slider-text">
           <h2><%= item.title %></h2>
           <h6 class="my-4">
@@ -125,7 +125,25 @@
   <div class="container">
     <div class="appointment-area__inner white-bg p-relative">
       <div class="row">
-        <div class="col-12">
+        <div class="col-xl-5 col-lg-5">
+          <div class="appointment__form">
+            <div class="appointment__form--inner">
+              <h4>Get appointment</h4>
+            </div>
+            <div class="appointment__inner">
+              <form action="/appointment" method="POST">
+                <input type="text" name="name" placeholder="<%= t('Your name') %>">
+                <input type="email" name="email" placeholder="<%= t('Your email') %>">
+                <textarea name="text" id="text" cols="30" rows="10"
+                          placeholder="<%= t('Write here') %>...">
+                </textarea>
+
+                <button class="btn btn-primary btn-service" type="submit"><%= t('Make an appointment') %></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7">
           <div class="appointment__counter">
             <div class="appoinment-section-title">
               <div class="mb-20">
@@ -141,29 +159,29 @@
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter">
-                    <h2><span class="pink-color counter"><%= achievement.doctorNumber %></span></h2>
-                    <span><%= t('doctors') %></span>
+                    <h2><span class="pink-color counter"><%= achievement.doctorNumber %> <%= t('years') %></span></h2>
+                    <span><%= t('Specialize in treatment abroad') %></span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pb-25 pl-65 ">
                     <h2><span class="green-color counter"><%= achievement.branchNumber %></span></h2>
-                    <span><%= t('all branches') %></span>
+                    <span><%= t('Cured patients') %></span>
                   </div>
                 </div>
               </div>
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-25">
-                    <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %></span>+
+                    <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %>%</span>+
                     </h2>
-                    <span><%= t('total patients') %></span>
+                    <span><%= t('Successful surgeries') %></span>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-65">
                     <h2><span class="pink-color counter"><%= achievement.awardNumber %></span></h2>
-                    <span><%= t('awards') %></span>
+                    <span><%= t('Russian speaking translators') %></span>
                   </div>
                 </div>
               </div>
@@ -208,8 +226,8 @@
                         <div class="row align-items-stretch justify-content-center">
                           <div>
                             <div class="image-wrapper">
-                            <img src="<%= testimonial.key %>"
-                                 class="rounded-circle" alt=""/>
+                              <img src="<%= testimonial.key %>"
+                                   class="rounded-circle" alt=""/>
                             </div>
                           </div>
                           <div>

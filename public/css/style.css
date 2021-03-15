@@ -2013,6 +2013,7 @@ img {
     padding: 20px;
     text-align: center;
     margin: 10px;
+    height: 90%;
 }
 
 .appoinment-section-title h2 {
@@ -2025,7 +2026,7 @@ img {
 }
 
 .appointment__counter {
-    padding: 50px 50px 0px 50px;
+    padding: 50px 50px 0 50px;
 }
 
 .appointment__inner form input,
@@ -2121,7 +2122,7 @@ img {
 
 .single__counter > span {
     color: #648ed6;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: capitalize;
 }
 

@@ -22,7 +22,8 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
 
 app.use(i18next)
 app.use(adminBro.options.rootPath, adminBroRouter)
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(mainRoutes)
 
 app.get('/500', errorController.get500)
@@ -30,6 +31,7 @@ app.get('/500', errorController.get500)
 app.use(errorController.get404)
 
 app.use((error, req, res, next) => {
+  console.log(error)
   res.status(500).render('500', {
     pageTitle: 'Error!',
     path: '/500'

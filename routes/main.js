@@ -9,4 +9,6 @@ router.get('/', indexController.getIndex)
 router.get('/blogs', blogController.getBlogList)
 router.get('/blogs/:id', blogController.getBlogDetail)
 
+router.post('/appointment', indexController.postAppointment)
+
 module.exports = router

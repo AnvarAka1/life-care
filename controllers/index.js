@@ -6,6 +6,7 @@ const Achievement = require('../models/achievement')
 const Testimonial = require('../models/testimonial')
 const Partner = require('../models/partner')
 const Treatment = require('../models/treatment')
+const Appointment = require('../models/appointment')
 const { getFormattedItem } = require('../utils/item')
 const { getFormattedList } = require('../utils/list')
 
@@ -63,5 +64,23 @@ exports.getIndex = (req, res, next) => {
       const error = new Error(err)
       error.httpStatusCode = 500
       return next(error)
+    })
+}
+
+exports.postAppointment = (req, res, next) => {
+  const appointment = new Appointment({
+    name: req.body.name,
+    email: req.body.email,
+    text: req.body.text
+  })
+
+  appointment.save()
+    .then(result => {
+      res.redirect('/')
+    })
+    .catch(err => {
+      const error = new Error(err)
+      error.statusCode = 500
+      next(error)
     })
 }

@@ -4,11 +4,6 @@ const { contentNavigation } = require('../navigation')
 module.exports = {
   resource: Partner,
   options: {
-    navigation: contentNavigation,
-    properties: {
-      title: {
-        isTitle: true
-      }
-    }
+    navigation: contentNavigation
   }
 }

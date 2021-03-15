@@ -13,6 +13,7 @@ const Achievement = require('./resources/Achievement')
 const Testimonial = require('./resources/Testimonial')
 const Partner = require('./resources/Partner')
 const Treatment = require('./resources/Treatment')
+const Appointment = require('./resources/Appointment')
 
 const UserModel = require('../models/user')
 
@@ -29,7 +30,8 @@ const resources = [
   withImage(hideEditTimestamps(Treatment)),
   hideEditTimestamps(Achievement),
   withImage(hideEditTimestamps(Testimonial)),
-  withImage(hideEditTimestamps(Partner))
+  withImage(hideEditTimestamps(Partner)),
+  hideEditTimestamps(Appointment),
 ]
 
 const adminBroOptions = {

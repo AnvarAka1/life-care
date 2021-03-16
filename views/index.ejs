@@ -128,7 +128,7 @@
         <div class="col-xl-5 col-lg-5">
           <div class="appointment__form">
             <div class="appointment__form--inner">
-              <h4>Get appointment</h4>
+              <h4><%= t('Get appointment with a doctor') %></h4>
             </div>
             <div class="appointment__inner">
               <form action="/appointment" method="POST">
@@ -173,7 +173,7 @@
               <div class="row no-gutters">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div class="single__counter pt-65 pl-25">
-                    <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %>%</span>+
+                    <h2 class="green-color"><span class="green-color counter"><%= achievement.patientNumber %></span>%
                     </h2>
                     <span><%= t('Successful surgeries') %></span>
                   </div>
@@ -315,20 +315,24 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6><%= t('Certificate that are own by trusts') %></h6>
-          <h2><%= t('Partners carousel') %></h2>
+          <h6><%= t('Clinics, we cooperate with') %></h6>
+          <h2><%= t('Clinic carousel') %></h2>
         </div>
       </div>
     </div>
     <div class="row">
       <!-- Multiple -->
-      <% partners.forEach(partner => { %>
-        <div class="col-lg-2 col-md-4">
-          <div class="partner-img">
-            <img src="<%= partner.key %>" class="img-fluid" alt="<%= partner.title %>">
-          </div>
+      <div class="swiper-container partners-slider">
+        <div class="swiper-wrapper">
+          <% partners.forEach(partner => { %>
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="<%= partner.key %>" class="img-fluid" alt="<%= partner.title %>">
+              </div>
+            </div>
+          <% }) %>
         </div>
-      <% }) %>
+      </div>
 
     </div>
   </div>

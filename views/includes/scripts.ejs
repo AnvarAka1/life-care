@@ -11,17 +11,18 @@
 
 <script src="/js/main.js"></script>
 <script>
-  var swiper = new Swiper('.swiper-container', {
+  const slider = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
     },
   })
 
-  var swiper = new Swiper('.testimonials-slider', {
+  const testimonialSwiper = new Swiper('.testimonials-slider', {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
+    grabCursor: true,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -32,6 +33,31 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  })
+
+  const partnersSwiper = new Swiper('.partners-slider', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    grabCursor: true,
+    breakpoints: {
+      584: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
   })
 </script>
 <script>

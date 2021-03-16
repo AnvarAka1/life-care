@@ -43,7 +43,12 @@ const testimonialSchema = new Schema({
       type: String,
       required: true
     }
-  }
+  },
+  key: {},
+  mimeType: {},
+  bucket: {},
+  size: {}
+
 }, { timestamps: true })
 
 module.exports = model('Testimonial', testimonialSchema)

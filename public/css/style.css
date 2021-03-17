@@ -1820,7 +1820,6 @@ img {
 
 .our-services .service-wrap:after {
     background: linear-gradient(90deg, #648ed6 0%, #4c8cce 95%);
-    opacity: 1;
     content: "";
     display: block;
     width: 90%;
@@ -1857,7 +1856,7 @@ img {
 }
 
 .our-services .service-icon img {
-    width: 50px;
+    width: 40px;
 }
 
 .our-services .service-wrap .service-icon i:before {
@@ -1868,9 +1867,12 @@ img {
 .our-services .service-wrap .service-title {
     font-size: 22px;
     margin-bottom: 10px;
-    transition: all 0.9s ease 0s;
     margin-top: 20px;
     font-weight: 700;
+}
+
+.our-services .service-wrap:hover .service-title {
+    color: white;
 }
 
 .our-services .service-wrap .service-title a {

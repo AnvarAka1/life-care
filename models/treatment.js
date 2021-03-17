@@ -14,6 +14,16 @@ const treatmentSchema = new Schema({
   image: {
     type: String
   },
+  shortDescription: {
+    ru: {
+      type: String,
+      required: true
+    },
+    en: {
+      type: String,
+      required: true
+    }
+  },
   description: {
     ru: {
       type: String,

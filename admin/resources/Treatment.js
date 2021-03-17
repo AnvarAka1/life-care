@@ -8,6 +8,12 @@ module.exports = {
     properties: {
       _id: {
         isTitle: true
+      },
+      'description.en': {
+        type: 'richtext'
+      },
+      'description.ru': {
+        type: 'richtext'
       }
     }
   }

@@ -12,11 +12,11 @@ const { getFormattedList } = require('../utils/list')
 
 const getSlideshows = () => Slideshow.find({}).limit(10).lean()
 const getAdvantage = () => Advantage.findOne().lean()
-const getServices = () => Service.find({}).limit(6).lean()
+const getServices = () => Service.find({}).limit(12).lean()
 const getTreatments = () => Treatment.find({}).limit(6).lean()
 const getAchievement = () => Achievement.findOne().lean()
 const getTestimonial = () => Testimonial.find({}).limit(10).lean()
-const getBlogs = () => Blog.find({}).sort({ _id: 'desc' }).lean().limit(3)
+const getBlogs = () => Blog.find({}).sort({ _id: 'desc' }).limit(3).lean()
 const getPartners = () => Partner.find({}).lean()
 
 exports.getIndex = (req, res, next) => {

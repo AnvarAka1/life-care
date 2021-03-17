@@ -40,7 +40,7 @@
               <div class="news-list mb-3">
                 <ul>
                   <li class="pr-3">
-                    <a href="blog-detail.html">
+                    <a href="#">
                       <i class="fa fa-calendar yellow"></i> <%= treatment.createdAt %>
                     </a>
                   </li>
@@ -63,7 +63,7 @@
               <% recentTreatments.forEach(treatment => { %>
 
                 <li>
-                  <a href="/blogs/<%= treatment._id %>">
+                  <a href="/treatments/<%= treatment._id %>">
                     <%= treatment.title %>
                   </a>
                   <p><span class="date"><%= treatment.createdAt %></span></p>

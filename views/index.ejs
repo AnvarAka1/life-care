@@ -119,7 +119,27 @@
           <h2>
             <%= advantage.title %>
           </h2>
-          <h6><%- advantage.description %></h6>
+          <h6 class="text-primary">
+            <%= t('Why treatment in the leading international clinics in India?') %>
+          </h6>
+          <ul>
+            <li>- <%= t('Accurate diagnosis in a short time') %></li>
+            <li>- <%= t('More than 500,000 successful surgeries') %></li>
+            <li>- <%= t('Qualified doctors with extensive experience') %></li>
+            <li>- <%= t('Therapy and rehabilitation') %></li>
+            <li>- <%= t('Direct invoice from the clinic') %></li>
+          </ul>
+          <hr/>
+          <h6 class="text-primary"><%= t('Our advantages') %>:</h6>
+          <ul>
+            <li>1. <%= t('We have been specializing in medical treatment abroad for 6 years') %></li>
+            <li>2. <%= t('About 400 patients have been cured through us') %></li>
+            <li>3. <%= t('Only the best doctors and clinics in India work with us') %></li>
+            <li>4. <%= t('The success of all operations performed 98%') %></li>
+            <li>5. <%= t('About 20 Russian speaking translators serve and accompany our patients in India') %></li>
+            <li>
+              6. <%= t('After the arrival of patients in Uzbekistan, we support with medicines and give advice on further health support') %></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -205,16 +225,22 @@
   <div class="container">
     <!-- Section content -->
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-5">
         <div class="section-heading">
-          <h6><%= t('See what people think about us') %></h6>
-          <h2><%= t('Our Best') %> <span class="text-primary"><%= t('Clients') %></span></h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the
-            industry's standard dummy text ever since the 1500s,</p>
+          <h6><%= t('Briefly about us') %></h6>
+          <h2><%= t('Finding the good') %> - <span class="text-primary"><%= t('achieving the best') %>!</span></h2>
+          <p>
+            <%= t('People with serious illnesses often do not know where to go for help in order to receive qualified medical care.') %>
+          </p>
+          <p>
+            <%= t('Our team of doctors, lawyers and economists will help you find a specialist both in our country and abroad. It is very important to determine the exact diagnosis of the disease, on which the treatment tactics will depend.') %>
+          </p>
+          <p>
+            <%= t('We will help you find a clinic, consult with the right specialist, determine the treatment program, collect all the necessary documents when choosing another country, provide visa support and much more.') %>
+          </p>
         </div>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <div class="swiper-container testimonial-slider">
           <div class="swiper-wrapper">
             <!-- Multiple -->

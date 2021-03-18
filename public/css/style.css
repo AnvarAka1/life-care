@@ -88,14 +88,18 @@ ul {
     padding: 0;
 }
 
-ul li {
+ul li, ol li {
     margin-bottom: 0;
     line-height: 36px;
     color: #777;
     font-size: 14px;
     position: relative;
-    display: block;
+
     padding: 0;
+}
+
+ul li {
+    display: block;
 }
 
 a:hover {
@@ -916,6 +920,14 @@ label {
     text-transform: uppercase;
     margin-bottom: 10px;
     position: relative;
+}
+
+.about-sec-content ul {
+
+}
+
+.about-sec-content ul li {
+    line-height: 28px
 }
 
 .exp .exp-caption {
@@ -2328,7 +2340,7 @@ img {
 }
 
 .footer-section .footer-top {
-    padding: 100px 0 90px 0;
+    padding: 100px 0 0;
 }
 
 .footer-section .footer-top .footer-top-left h3 {
@@ -3153,4 +3165,19 @@ blockquote::before {
 
 .btn.disabled {
     cursor: not-allowed;
+}
+
+.footer-table {
+    color: white;
+    border-spacing: 5px;
+    border-collapse: separate;
+    margin-bottom: 20px;
+}
+
+.footer-table td {
+    vertical-align: top;
+}
+
+.footer-table td:last-child {
+    padding-left: 5px
 }

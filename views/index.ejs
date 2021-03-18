@@ -39,13 +39,21 @@
       </div>
     </div>
     <div class="row align-items-stretch">
+      <% const serviceIcons = [
+        'images/icon/tooth.png',
+        'images/icon/bone.png',
+        'images/icon/eye.png',
+        'images/icon/health.png',
+        'images/icon/lungs.png',
+        'images/icon/surgery.png'
 
-      <% services.forEach(service => { %>
+      ] %>
+      <% services.forEach((service, index) => { %>
         <div class="col-xl-4 col-lg-4 col-md-6 h-100">
           <div class="service-wrap">
             <div class="service-desc">
               <div class="service-icon">
-                <img src="images/icon/tooth.png" class="img-fluid" alt="">
+                <img src="<%= serviceIcons[index % 6] %>" class="img-fluid" alt="">
               </div>
 
               <h3 class="service-title">

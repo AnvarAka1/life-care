@@ -10,16 +10,6 @@ const advantageSchema = new Schema({
       type: String,
       required: true
     }
-  },
-  description: {
-    ru: {
-      type: String,
-      required: true
-    },
-    en: {
-      type: String,
-      required: true
-    }
   }
 }, { timestamps: true })
 

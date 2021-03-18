@@ -354,17 +354,13 @@
     </div>
     <div class="row">
       <!-- Multiple -->
-      <div class="swiper-container partners-slider">
-        <div class="swiper-wrapper">
-          <% partners.forEach(partner => { %>
-            <div class="swiper-slide">
-              <div class="partner-img">
-                <img src="<%= partner.key %>" class="img-fluid" alt="<%= partner.title %>">
-              </div>
-            </div>
-          <% }) %>
+      <% partners.forEach(partner => { %>
+        <div class="col-lg-2 col-md-4">
+          <div class="partner-img">
+            <img src="<%= partner.key %>" class="img-fluid" alt="<%= partner.title %>">
+          </div>
         </div>
-      </div>
+      <% }) %>
 
     </div>
   </div>

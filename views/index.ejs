@@ -40,20 +40,19 @@
     </div>
     <div class="row align-items-stretch">
       <% const serviceIcons = [
-        'images/icon/tooth.png',
-        'images/icon/bone.png',
-        'images/icon/eye.png',
-        'images/icon/health.png',
-        'images/icon/lungs.png',
-        'images/icon/surgery.png'
-
+        'images/icon/new-icons/ultrasound.png',
+        'images/icon/new-icons/flask.png',
+        'images/icon/new-icons/ultrasound.png',
+        'images/icon/new-icons/heart-rate.png',
+        'images/icon/new-icons/mental-health.png',
+        'images/icon/new-icons/nurse.png'
       ] %>
       <% services.forEach((service, index) => { %>
         <div class="col-xl-4 col-lg-4 col-md-6 h-100">
           <div class="service-wrap">
             <div class="service-desc">
               <div class="service-icon">
-                <img src="<%= serviceIcons[index % 6] %>" class="img-fluid" alt="">
+                <img src="<%= serviceIcons[index % 11] %>" class="img-fluid" alt="">
               </div>
 
               <h3 class="service-title">
@@ -98,7 +97,7 @@
                   <%= treatment.shortDescription %>
                 </p>
                 <a href="/treatments/<%= treatment._id %>" class="btn btn-secondary">
-                  Read more <i class="fa fa-long-arrow-right"></i>
+                  <%= t('Read more') %> <i class="fa fa-long-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -123,7 +122,6 @@
       </div>
       <div class="col-lg-7">
         <div class="about-sec-content">
-          <span class="about-sub-title text-primary"><%= t('our advantages') %></span>
           <h2>
             <%= advantage.title %>
           </h2>
@@ -355,8 +353,7 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2">
         <div class="service-heading text-center mb-5">
-          <h6><%= t('Clinics, we cooperate with') %></h6>
-          <h2><%= t('Clinic carousel') %></h2>
+          <h2><%= t('Clinics, we cooperate with') %></h2>
         </div>
       </div>
     </div>

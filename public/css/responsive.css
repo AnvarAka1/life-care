@@ -158,6 +158,9 @@
 
 @media (max-width: 1200px) {
 	.blog-image {
+		height: 290px
+	}
+	.blog-image-detail {
 		height: 610px
 	}
 	.partner-img {
@@ -167,7 +170,7 @@
 
 @media (max-width: 992px) {
 	.blog-image {
-		height: 690px
+		height: 330px
 	}
 	.partner-img {
 		height: 83px;
@@ -192,7 +195,10 @@
 		width: 70px
 	}
 	.blog-image {
-		height: 510px;
+		height: 330px;
+	}
+	.blog-image-detail {
+		height: 510px
 	}
 
 	.blog-image img {
@@ -214,12 +220,18 @@
 		font-size: 14px;
 	}
 	.blog-image {
+		height: 250px
+	}
+	.blog-image-detail {
 		height: 410px
 	}
 }
 
 @media (max-width: 420px) {
 	.blog-image {
+		height: 220px
+	}
+	.blog-image-detail {
 		height: 300px
 	}
 }

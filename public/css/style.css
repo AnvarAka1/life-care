@@ -2263,6 +2263,11 @@ img {
 
 .blog-image {
     position: relative;
+    height: 350px
+}
+
+.blog-image-detail {
+    position: relative;
     height: 730px
 }
 
@@ -2274,8 +2279,14 @@ img {
 .blog-image img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
+}
+
+.blog-image-detail img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .blog-date p {

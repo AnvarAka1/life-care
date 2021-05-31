@@ -2263,7 +2263,7 @@ img {
 
 .blog-image {
     position: relative;
-    height: 350px
+    height: 730px
 }
 
 .blog-image > a {
@@ -2274,7 +2274,7 @@ img {
 .blog-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 
 }
 

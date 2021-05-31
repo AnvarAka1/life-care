@@ -158,7 +158,7 @@
 
 @media (max-width: 1200px) {
 	.blog-image {
-		height: 290px
+		height: 610px
 	}
 	.partner-img {
 		height: 80px;
@@ -167,7 +167,7 @@
 
 @media (max-width: 992px) {
 	.blog-image {
-		height: 330px
+		height: 690px
 	}
 	.partner-img {
 		height: 83px;
@@ -192,7 +192,7 @@
 		width: 70px
 	}
 	.blog-image {
-		height: 330px;
+		height: 510px;
 	}
 
 	.blog-image img {
@@ -214,12 +214,12 @@
 		font-size: 14px;
 	}
 	.blog-image {
-		height: 250px
+		height: 410px
 	}
 }
 
 @media (max-width: 420px) {
 	.blog-image {
-		height: 220px
+		height: 300px
 	}
 }

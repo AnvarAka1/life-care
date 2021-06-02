@@ -1,12 +1,12 @@
 {
   "name": "life-care-node",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "life-care.app.js",
   "author": "Anvar Abdulsatarov",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
-    "dev": "nodemon app.js",
+    "start": "NODE_ENV=production node life-care.app.js",
+    "dev": "nodemon life-care.app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

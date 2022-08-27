@@ -1,4 +1,7 @@
-const { pipe } = require('ramda')
+const {
+  pipe,
+  defaultTo
+} = require('ramda')
 
 const { getDateFormattedList } = require('./date')
 const { getTranslatedList } = require('./language')

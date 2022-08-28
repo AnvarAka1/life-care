@@ -39,7 +39,7 @@ app.set('views', 'views')
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
-const MONGODB_URI = 'mongodb+srv://root:e2XHOSxPuEcj7nnb@medellacluster.rrkyv.mongodb.net/?retryWrites=true&w=majority'
+const MONGODB_URI = 'mongodb+srv://anvar_aka:mongodb_password@cluster0.waage.mongodb.net/medela?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -55,6 +55,7 @@ app.use(errorController.get404)
 app.use(Sentry.Handlers.errorHandler())
 
 app.use((error, req, res, next) => {
+  console.log(error)
   res.status(500).render('500', {
     pageTitle: 'Error!',
     path: '/500'

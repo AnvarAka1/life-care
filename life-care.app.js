@@ -1,3 +1,6 @@
+import * as Sentry from '@sentry/node'
+import * as Tracing from '@sentry/tracing'
+
 const path = require('path')
 
 const express = require('express')
@@ -10,6 +13,27 @@ const errorController = require('./controllers/error')
 const mainRoutes = require('./routes/main')
 
 const app = express()
+
+Sentry.init({
+  dsn: 'https://bfe427a17d184af08ccda88b8721cd84@o1381528.ingest.sentry.io/6695166',
+  integrations: [
+    // enable HTTP calls tracing
+    new Sentry.Integrations.Http({ tracing: true }),
+    // enable Express.js middleware tracing
+    new Tracing.Integrations.Express({ app }),
+  ],
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+})
+
+// RequestHandler creates a separate execution context using domains, so that every
+// transaction/span/breadcrumb is attached to its own Hub instance
+app.use(Sentry.Handlers.requestHandler())
+// TracingHandler creates a trace for every incoming request
+app.use(Sentry.Handlers.tracingHandler())
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
@@ -28,6 +52,8 @@ app.use(mainRoutes)
 app.get('/500', errorController.get500)
 
 app.use(errorController.get404)
+
+app.use(Sentry.Handlers.errorHandler())
 
 app.use((error, req, res, next) => {
   res.status(500).render('500', {

@@ -1,8 +1,7 @@
-import * as Sentry from '@sentry/node'
-import * as Tracing from '@sentry/tracing'
-
 const path = require('path')
 
+const Sentry = require('@sentry/node')
+const Tracing = require('@sentry/tracing')
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
